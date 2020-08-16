@@ -34,7 +34,7 @@ paddle_b.goto(350, 0)
 # Ball
 ball = turtle.Turtle()
 ball.speed(0)
-ball.shape("square")
+ball.shape("circle")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
@@ -112,14 +112,14 @@ while True:
         if ball.xcor() > 350:
             score_a += 1
             pen.clear()
-            pen.write(f"Player A: {score_a}  Player B: {score_b}", align="center", font=("Courier", 24, "normal"))
+            pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
             ball.goto(0, 0)
             ball.dx *= -1
 
         elif ball.xcor() < -350:
             score_b += 1
             pen.clear()
-            pen.write(f"Player A: {score_a}  Player B: {score_a}", align="center", font=("Courier", 24, "normal"))
+            pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
             ball.goto(0, 0)
             ball.dx *= -1
 
